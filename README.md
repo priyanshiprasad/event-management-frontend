@@ -1,16 +1,49 @@
-# React + Vite
+# Event Management System — Frontend
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A modern, responsive web application built with React for the Event Management System.
 
-Currently, two official plugins are available:
+## Tech Stack
+- React 18
+- Vite
+- Tailwind CSS
+- Axios
+- React Router v6
+- Docker + Nginx
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+## Features
+- JWT authentication with automatic token management
+- Role-based routing (Admin, Organizer, Attendee)
+- Browse, search, and filter events
+- Real-time booking with capacity tracking
+- PDF ticket confirmation via email
+- Organizer dashboard — create, edit, delete events
+- Admin dashboard — manage users, events, bookings
+- In-person and virtual event support
+- Fully responsive design
 
-## React Compiler
+## Pages
+- Landing Page
+- Login / Register
+- Home — Browse Events
+- Event Detail + Booking
+- My Bookings
+- Organizer Dashboard
+- Create / Edit Event
+- Admin Dashboard
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+## Setup
 
-## Expanding the ESLint configuration
+### Local Setup
+1. Clone the repository
+2. Run `npm install`
+3. Run `npm run dev`
+4. Open `http://localhost:5173`
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+### Docker Setup
+```bash
+docker-compose up --build
+```
+(Run from the root folder containing docker-compose.yml)
+
+## Environment
+The app proxies all `/api` calls to `http://localhost:8080` in development via Vite config.
