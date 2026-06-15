@@ -351,18 +351,7 @@ function EventDetailPage() {
                         : "Address",
                     value:
                       event.locationType === "VIRTUAL" ? (
-                        <a
-                          href={event.locationDetails}
-                          target="_blank"
-                          rel="noreferrer"
-                          style={{
-                            color: "#e8c97e",
-                            textDecoration: "none",
-                            fontFamily: "'DM Sans', sans-serif",
-                          }}
-                        >
-                          {event.locationDetails || "Not specified"}
-                        </a>
+                        "Meeting URL is provided in your booking confirmation email."
                       ) : (
                         event.locationDetails || "Not specified"
                       ),
