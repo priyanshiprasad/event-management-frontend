@@ -149,10 +149,9 @@ function MyEventsPage() {
           </div>
 
           {/* Stats */}
-          <div style={{ display: "flex", gap: 5, textAlign: "center" }}>
+          <div style={{ display: "flex", gap: 10, textAlign: "center" }}>
             {[
               { label: "Total Events", value: events.length, icon: "🎯" },
-              { label: "Total Capacity", value: totalCapacity, icon: "👥" },
               { label: "Registered", value: totalRegistered, icon: "✅" },
               {
                 label: "Available Spots",

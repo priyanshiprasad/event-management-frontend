@@ -39,7 +39,7 @@ function EditEventPage() {
           description: e.description || "",
           venue: e.venue,
           capacity: e.capacity,
-          category: e.category,
+          category: e.category || "",
           eventDate: e.eventDate ? e.eventDate.slice(0, 16) : "",
           customCategory: "",
           locationType: e.locationType || "IN_PERSON",

@@ -34,6 +34,12 @@ function CreateEventPage() {
   const handleSubmit = async (e) => {
     e.preventDefault();
 
+    if (!form.category) {
+      setError("Please select a category.");
+      setLoading(false);
+      return;
+    }
+
     // Frontend validation
     if (form.locationType === "IN_PERSON" && !form.locationDetails.trim()) {
       setError("Venue address is required for in-person events.");
@@ -65,7 +71,7 @@ function CreateEventPage() {
         locationType: form.locationType,
         locationDetails: form.locationDetails,
       };
-      await createEvent(payload); 
+      await createEvent(payload);
       navigate("/organizer");
     } catch (err) {
       setError(
@@ -269,6 +275,9 @@ function CreateEventPage() {
               onChange={handleChange}
               className="gold-select"
             >
+              <option value="" disabled>
+                Select a category
+              </option>
               {CATEGORIES.map((cat) => (
                 <option key={cat} value={cat}>
                   {cat}
