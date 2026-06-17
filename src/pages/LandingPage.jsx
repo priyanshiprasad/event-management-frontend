@@ -1,5 +1,6 @@
 import { useEffect, useRef, useState } from "react";
 import { useNavigate } from "react-router-dom";
+import neonpulse from "./assets/neonpulse.jpg";
 
 function LandingPage() {
   const navigate = useNavigate();
@@ -404,7 +405,7 @@ function LandingPage() {
                 style={{
                   width: "100%",
                   height: 100,
-                  backgroundImage: "url('./assets/neonpulse.jpg')",
+                   backgroundImage: `url(${neonpulse})`,
                   backgroundSize: "cover",
                   backgroundPosition: "center",
                   marginBottom: 10,
